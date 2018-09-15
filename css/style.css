@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: 580 20px Varela Round, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.keys li button.val {
+  color: black; 
+}
+
+.keys li button.plusminus {
+  color: black; 
+}
+
+.keys li.operator button {
+  color: #EEEEEE; 
+}
+
+ul{
+  list-style:none;
+}
+
+#calculator {
+	width: 280px;
+	height: auto;
+  margin: 3em;
+  --box-shadow: 0 0 0 1px #9b9b9b;
+  box-shadow: 0 0 0 1px #5E6974;  
+  border-radius: 2px;
+}
+
+.top li.clear {
+	float: left;
+}
+
+.top .screen {
+  height: 85px;
+  width: 100%;
+	float: right;
+	padding: 0 10px;
+	background: #6E8194;
+  font-size: 40px;
+  line-height: 101px;
+	color: #EEEEEE;
+  font-weight: 400;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+.keys button {
+  width: 100%;
+  height: 100%;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+.keys, .top {
+	overflow: hidden;
+}
+
+.keys li.zero button {
+  text-align: left;
+  padding-left: 30px;
+}
+.keys li, .top li.clear {
+	float: left;
+	position: relative;
+	top: 0;
+	cursor: pointer;
+	width: 70px;
+	height: 60px;
+	background: #DCDCDC;
+  box-shadow: 0 0 0 1px #878789;
+	color: #222;
+	line-height: 60px;
+	text-align: center;
+	-webkit-user-select: none;
+	user-select: none;
+	transition: all 0.2s ease;
+}
+
+li.operator {
+	margin-right: 0;
+}
+
+.keys li.operator {
+	background: #F6872C;
+  color: #EEEEEE;
+	margin-right: 0;
+}
+
+.keys li.operatora {
+  background: #D0D0D0;
+  color: #222;
+}
+
+.keys li.eval {
+	background: #f1ff92;
+	box-shadow: 0px 4px #9da853;
+	color: #888e5f;
+}
+
+.top li.clear {
+	background: #ff9fa8;
+	box-shadow: 0px 4px #ff7c87;
+	color: #EEEEEE;
+}
+
+
+.keys li:active {
+	background: #c3c3c3;
+}
+
+.keys li.operator:active {
+  background: #F6872C;
+}
+
+.keys li.zero {
+  width:140px;
+}
+/* close, min, max buttons */
+.ctrls {
+  list-style: none;
+  margin: 5px 0 0 10px;
+  padding: 0;
+  position: absolute;
+}
+.ctrls li {
+  float: left;
+  display: inline;
+}
+.ctrls li a {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 2px 2px 5px;
+  justify-content:center;
+  align-content:center;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border-radius: 100%;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 1px,
+    inset rgba(0, 0, 0, 1) 0px 1px 2px 1px;
+  background-image: -moz-radial-gradient(
+      9px -4px,
+      #fff 0px,
+      #fff 2px,
+      rgba(255, 255, 255, 0) 4px
+    ),
+    -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 0%, rgba(
+            255,
+            255,
+            255,
+            0
+          )
+          100%);
+  background-image: -webkit-radial-gradient(
+      9px -4px,
+      #fff 0px,
+      #fff 2px,
+      rgba(255, 255, 255, 0) 4px
+    ),
+    -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 0%, rgba(
+            255,
+            255,
+            255,
+            0
+          )
+          100%);
+  background-image: radial-gradient(
+      9px -4px,
+      #fff 0px,
+      #fff 2px,
+      rgba(255, 255, 255, 0) 4px
+    ),
+    linear-gradient(
+      bottom,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+.close a {
+  background-color: #F6442B;
+}
+.min a {
+  background-color: #FFBC2B;
+}
+.max a {
+  background-color: #25C73A;
+}
+
+.dock img.dock {
+  opacity: 0.5;
+  filter: alpha(opacity=50); 
+  width: 90%;
+}
+.dock img.calc {
+  height: 4%;
+  width: 4%;
+  position: relative;
+}
+.dock {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  --transform: translate(-50%, -50%);
+  margin: -100px auto 0;
+  left: 5%;
+}
